@@ -131,4 +131,3 @@ Nayra Sharaky
 
 ---
 
-**Ready for IEEE Task 2! 🚀**
