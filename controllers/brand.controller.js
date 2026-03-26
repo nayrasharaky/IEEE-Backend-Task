@@ -1,7 +1,6 @@
 import Brand from "../models/brand.model.js";
 import slugify from "slugify";
 
-// Create new brand
 export const addBrand = async (req, res) => {
   const { name, image } = req.body;
 
@@ -17,7 +16,6 @@ export const addBrand = async (req, res) => {
   });
 };
 
-// Get all brands
 export const fetchBrands = async (req, res) => {
   const brandList = await Brand.find();
 
@@ -27,7 +25,6 @@ export const fetchBrands = async (req, res) => {
   });
 };
 
-// Get single brand
 export const fetchSingleBrand = async (req, res) => {
   const { id } = req.params;
 
@@ -44,7 +41,6 @@ export const fetchSingleBrand = async (req, res) => {
   });
 };
 
-// Update brand
 export const editBrand = async (req, res) => {
   const { id } = req.params;
   const { name, image } = req.body;
@@ -68,7 +64,6 @@ export const editBrand = async (req, res) => {
   });
 };
 
-// Delete brand
 export const removeBrand = async (req, res) => {
   const { id } = req.params;
 
