@@ -1,0 +1,24 @@
+{
+  "type": "Compass Connections",
+  "version": {
+    "$numberInt": "1"
+  },
+  "connections": [
+    {
+      "id": "e39afe51-a875-4957-a3d6-60175843d124",
+      "lastUsed": {
+        "$date": {
+          "$numberLong": "1774483913287"
+        }
+      },
+      "favorite": {
+        "name": "localhost:27017"
+      },
+      "savedConnectionType": "recent",
+      "connectionOptions": {
+        "connectionString": "mongodb://localhost:27017/ieeetask2",
+        "oidc": {}
+      }
+    }
+  ]
+}
