@@ -4,117 +4,58 @@ This project contains a simple RESTful API for managing brands. It demonstrates 
 
 📌 Task 1: Create Brand
 
-This endpoint allows you to create a new brand. The slug is automatically generated from the brand name.
+This task allows you to create a new brand. The slug (URL-friendly name) is automatically generated from the brand name.
 
-Example:
+Functionality:
 
-Request:
+Add a new brand with a name and an optional image.
+Slug is automatically created from the name.
+Returns a success message and the created brand.
+📌 Task 2: Fetch All Brands
 
-POST /api/brands
-{
-  "name": "Nike",
-  "image": "nike-image-url"
-}
+This task retrieves all the brands stored in the database.
 
-Response:
+Functionality:
 
-{
-  "message": "Brand created successfully",
-  "result": {
-    "name": "Nike",
-    "slug": "nike",
-    "image": "nike-image-url"
-  }
-}
-📌 Task 2: Fetch Brands
-
-This endpoint returns all brands stored in the database.
-
-Example:
-
-Request:
-
-GET /api/brands
-
-Response:
-
-{
-  "count": 3,
-  "result": [
-    { "name": "Nike", "slug": "nike", "image": "nike-image-url" },
-    { "name": "Adidas", "slug": "adidas", "image": "adidas-image-url" },
-    { "name": "Puma", "slug": "puma", "image": "puma-image-url" }
-  ]
-}
+Returns a list of all brands.
+Includes the total count of brands.
+Each brand has a name, slug, and optional image.
 📌 Task 3: Fetch Single Brand
 
-This endpoint returns a single brand by its ID.
+This task retrieves details of a single brand by its ID.
 
-Example:
+Functionality:
 
-Request:
-
-GET /api/brands/:id
-
-Response:
-
-{
-  "result": {
-    "name": "Nike",
-    "slug": "nike",
-    "image": "nike-image-url"
-  }
-}
+Returns the brand’s details including name, slug, and image.
+If the brand does not exist, it returns an error message.
 📌 Task 4: Update Brand
 
-This endpoint updates a brand's name and/or image. The slug is updated automatically if the name changes.
+This task allows you to update an existing brand.
 
-Example:
+Functionality:
 
-Request:
-
-PUT /api/brands/:id
-{
-  "name": "Nike Updated",
-  "image": "new-image-url"
-}
-
-Response:
-
-{
-  "message": "Brand updated",
-  "result": {
-    "name": "Nike Updated",
-    "slug": "nike-updated",
-    "image": "new-image-url"
-  }
-}
+Update the name and/or image of a brand.
+If the name is updated, the slug is automatically updated as well.
+Returns a success message and the updated brand.
 📌 Task 5: Delete Brand
 
-This endpoint deletes a brand by its ID.
+This task allows you to delete a brand by its ID.
 
-Example:
+Functionality:
 
-Request:
-
-DELETE /api/brands/:id
-
-Response:
-
-{
-  "message": "Brand deleted"
-}
+Deletes the selected brand from the database.
+Returns a success message confirming deletion.
 🛠️ Technologies Used
 Node.js (ES6)
 Express.js
 MongoDB & Mongoose
 slugify
 ▶️ How to Run
-Clone the repository
-Run npm install to install dependencies
-Make sure MongoDB is running locally
-Run npm run dev
-Use Postman or Insomnia to test the API
+Clone the repository.
+Install dependencies.
+Make sure MongoDB is running locally.
+Start the server.
+Use tools like Postman or Insomnia to test the API.
 👩‍💻 Author
 
 Nayra Sharaky
